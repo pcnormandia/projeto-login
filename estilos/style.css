@@ -32,13 +32,15 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     height: 515px;
     width: 250px;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+    transform: translate(-50%, -50%);
+    transition: width .3s, height, .3s;
+    transition-timing-function: ease;
 }
 section#login > div#imagem{
     display: block;
@@ -53,10 +55,11 @@ section#login > div#formulario{
 }
 div#formulario > h1{
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 div#formulario > p{
     font-size: .8em;
+    margin: 5px 0px;
 }
 
 form > div.campo{
@@ -66,9 +69,31 @@ form > div.campo{
     height: 40px;
     border-radius: 7px;
     margin: 5px 0px;
+    border: 2px solid var(--cor1);
 }
 div.campo > label{
     display: none;
+}
+div.campo > span{
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+div.campo > input{
+    background-color: var(--cor2);
+    font-size: 1em;
+    /*Cálculo da largura a ser empregada utilizando a diferença por um valor fixo*/
+    width: calc(100% - 45px);    
+    height: 100%;
+    border: 0px;
+    border-radius: 7px;
+    padding: 2px;
+    transform: translateY(-13px);
+}
+/*configuração do campo input para mudança quando estiver sendo utilizado para digitação*/
+div.campo > input:focus-within{
+    background-color: white;
 }
 
 form > input[type=submit]{

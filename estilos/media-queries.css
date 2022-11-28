@@ -17,6 +17,7 @@ grandes telas: acima de 1200px
     }
     section#login{
         width: 80vw;
+        height: 320px;
     }
     /*Atributo float é utilizado para posicionamento da imagem a esquerda*/
     section#login > div#imagem{
@@ -38,6 +39,7 @@ grandes telas: acima de 1200px
     }
     section#login{
         width:900px;
+        height: 350px;
     }
     section#login > div#imagem{
         float:right;
