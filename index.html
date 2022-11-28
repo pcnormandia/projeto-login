@@ -8,6 +8,8 @@
     <!--Criação de link css-->
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-queries.css">
+    <!--Criação de link para icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -18,8 +20,19 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar a sua conta e poder fazer as configurações no ambiente.</p>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <span class="material-icons">person</span>
+                        <input type="email" name="nlogin" id="idlogin" placeholder="Seu email" required autocomplete="email" maxlength="30">
+                        <label for="idlogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <span class="material-icons">vpn_key</span>
+                        <input type="password" name="nsenha" id="idsenha" placeholder="Sua senha" min="8" max="20" required autocomplete="current-password">
+                        <label for="idsenha">Senha</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="">Esqueci a senha<span class="material-icons">mail</span></a>
                 </form>
             </div>
         </section>
